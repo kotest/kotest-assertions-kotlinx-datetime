@@ -1,5 +1,4 @@
 # kotest-assertions-kotlinx-datetime
-Kotest assertions library for 
 
 Kotest assertions for [kotlinx date time](https://github.com/Kotlin/kotlinx-datetime).
 
