@@ -2,6 +2,7 @@ object Libs {
 
    const val kotlinVersion = "1.4.31"
    const val org = "io.kotest.extensions"
+   const val dokkaVersion = "0.10.1"
 
    object Kotest {
       private const val version = "4.4.3"
