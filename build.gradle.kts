@@ -1,26 +1,8 @@
-buildscript {
-   repositories {
-      jcenter()
-      mavenCentral()
-      maven {
-         url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
-      }
-      maven {
-         url = uri("https://plugins.gradle.org/m2/")
-      }
-   }
-}
-
 plugins {
-   java
-   `java-library`
-   id("java-library")
-   id("maven-publish")
    signing
-   maven
+   `java-library`
    `maven-publish`
-   id("org.jetbrains.dokka") version Libs.dokkaVersion
-   kotlin("multiplatform").version(Libs.kotlinVersion)
+   kotlin("multiplatform") version "1.5.21"
 }
 
 repositories {
@@ -29,11 +11,9 @@ repositories {
    maven {
       url = uri("https://oss.sonatype.org/content/repositories/snapshots")
    }
-   maven(url = "https://kotlin.bintray.com/kotlinx/") // soon will be just jcenter()
-   jcenter()
 }
 
-group = Libs.org
+group = "io.kotest.extensions"
 version = Ci.version
 
 kotlin {
@@ -70,8 +50,8 @@ kotlin {
 
       val commonMain by getting {
          dependencies {
-            implementation(Libs.Kotest.assertionsShared)
-            implementation(Libs.KotlinTime.datetime)
+            implementation(libs.kotest.assertions.shared)
+            implementation(libs.kotlinx.datetime)
          }
       }
 
@@ -82,7 +62,7 @@ kotlin {
       val jvmTest by getting {
          dependsOn(jvmMain)
          dependencies {
-            implementation(Libs.Kotest.junit5)
+            implementation(libs.kotest.runner.junit5)
          }
       }
 
