@@ -2,7 +2,7 @@ plugins {
    signing
    `java-library`
    `maven-publish`
-   kotlin("multiplatform") version "1.6.21"
+   kotlin("multiplatform") version "1.8.21"
 }
 
 repositories {
@@ -28,7 +28,7 @@ kotlin {
          }
       }
 
-      js {
+      js(IR) {
          browser()
          nodejs()
       }
@@ -39,8 +39,6 @@ kotlin {
 
       macosX64()
       tvos()
-//      watchos()
-
       iosX64()
       iosArm64()
       iosArm32()
@@ -100,11 +98,6 @@ kotlin {
 
       val tvosMain by getting {
          dependsOn(desktopMain)
-      }
-
-      all {
-         languageSettings.useExperimentalAnnotation("kotlin.time.ExperimentalTime")
-         languageSettings.useExperimentalAnnotation("kotlin.experimental.ExperimentalTypeInference")
       }
    }
 }
