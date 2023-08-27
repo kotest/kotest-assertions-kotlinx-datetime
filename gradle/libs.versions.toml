@@ -1,9 +1,9 @@
 [versions]
-kotest = "5.5.4"
+kotest = "5.6.2"
 
 [libraries]
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5-jvm", version.ref = "kotest" }
 kotest-framework-api = { module = "io.kotest:kotest-framework-api", version.ref = "kotest" }
 kotest-assertions-shared = { module = "io.kotest:kotest-assertions-shared", version.ref = "kotest" }
 
-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.2.1" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.4.0" }

@@ -14,7 +14,7 @@ import kotlinx.datetime.Month
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.datetime.todayAt
-import kotlin.time.days
+import kotlin.time.Duration.Companion.days
 
 class LocalDateTimeTests : StringSpec({
 
