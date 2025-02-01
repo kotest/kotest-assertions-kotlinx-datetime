@@ -1,5 +1,7 @@
 # kotest-assertions-kotlinx-datetime
 
+** Migrated to the main kotest repo **
+
 Kotest assertions for [kotlinx date time](https://github.com/Kotlin/kotlinx-datetime).
 
 See [docs](https://kotest.io/docs/assertions/kotlinx-datetime-matchers.html).
